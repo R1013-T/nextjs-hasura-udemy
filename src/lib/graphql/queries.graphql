@@ -1,0 +1,23 @@
+query GetUsers {
+  users(order_by: { created_at: desc }) {
+    name
+    id
+    created_at
+  }
+}
+
+query GetUsersClient {
+  users(order_by: { created_at: desc }) @client {
+    name
+    id
+    created_at
+  }
+}
+
+query GetUserByID($id: uuid!) {
+  users_by_pk(id: $id) {
+    name
+    id
+    created_at
+  }
+}
