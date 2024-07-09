@@ -1,4 +1,5 @@
 import { print } from "graphql";
+import { GraphQLClient } from "graphql-request";
 import { getSdk, Requester } from "~/types/__generated__/graphql";
 
 interface RequestOptions {
